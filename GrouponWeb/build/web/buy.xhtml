@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>buy page</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p>buy something here</p>
+            <p>#{customerActions.display()}</p>
+            <p>enter the id the of the item you want to buy</p>
+            <h:inputText id="item" value ="#{customerActions.itemid}">
+            </h:inputText>
+            <h:commandButton id ="enter" value="send the id"
+                action="buyConfirmation.xhtml">
+                                 
+            </h:commandButton>
+            
+        </h:form>        
+    </h:body>
+</html>
+

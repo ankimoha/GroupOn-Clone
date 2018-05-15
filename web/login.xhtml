@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Login</title>
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="refresh"/>
+    </h:head>
+    <h:body>
+        <h3>if already registered, please login!!!</h3>
+        <h:form>
+            <p>Please provide login ID:
+                <h:inputText id="id" required="true" requiredMessage="this field is required"
+                             value="#{login.loginId}">
+                </h:inputText>
+            </p>
+            <p>Enter the password:
+                <h:inputText id="pwd" required="true" requiredMessage="this field is required"
+                             value="#{login.password}">
+                </h:inputText>
+            </p>
+            <p>
+                <h:commandButton id="submit" value="Submit"
+                                 action="#{login.login()}" />
+            </p>             
+        </h:form>
+    </h:body>
+</html>
+

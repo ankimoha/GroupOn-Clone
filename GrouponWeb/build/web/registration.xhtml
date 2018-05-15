@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="refresh"/>
+    </h:head>
+    <h:body>
+        <h:form id="gel">
+        <h3>register here if you are first user</h3>
+        
+        <p>Please enter your login ID:<br></br>
+            <h:inputText id="id" required ="true" 
+                         requiredMessage="The login field cannot be empty"
+                         title="Please enter your login ID:"
+                         value="#{registration.loginId}">
+
+
+            </h:inputText>
+        </p>
+        <p>Please enter your password:<br></br>
+             <h:inputText id="password" required ="true" 
+                         requiredMessage="The password field cannot be empty"
+                         title="Please enter your password:"
+                         value="#{registration.password}">
+             </h:inputText>
+        </p>
+        
+        <p>
+            Choose if you are a Seller:<br></br>
+             <h:selectOneMenu id="seller" required="true" style="width:150px" 
+                                 value="#{registration.isSeller}">  
+                 <f:selectItem  itemValue="#{true}" itemLabel="Yes"/>
+                 <f:selectItem  itemValue="#{false}" itemLabel="No"/>
+            </h:selectOneMenu>
+        </p>
+        
+        <p>
+            Choose if you are a Customer:<br></br>
+             <h:selectOneMenu id="customer" required="true" style="width:150px" 
+                              value="#{registration.isCustomer}">  
+                 <f:selectItem itemValue="#{true}" itemLabel="Yes"/>
+                 <f:selectItem itemValue="#{false}" itemLabel="No"/>
+            </h:selectOneMenu>
+        </p>
+        
+        <p>
+                <h:commandButton id="submit" value="Submit"
+                                 action="regConfirmation.xhtml" />
+        </p>
+        
+        </h:form>
+    </h:body>
+</html>
